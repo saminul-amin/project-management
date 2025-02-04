@@ -22,6 +22,15 @@ function App() {
     });
   }
 
+  function handleDeleteTask(id) {
+    setProjectsState((prevState) => {
+      return {
+        ...prevState,
+        tasks: prevState.projects.filter((task) => task.id !== id),
+      };
+    });
+  }
+
   return (
     <>
       <div>
